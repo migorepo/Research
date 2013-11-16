@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Wp8.Framework.Utils.Common
 {
@@ -242,6 +243,27 @@ namespace Wp8.Framework.Utils.Common
                     return Colors.Black;
 
             }
+        }
+
+        public static WriteableBitmap ToGrayScale(this WriteableBitmap bitmapImage)
+        {
+
+            for (var y = 0; y < bitmapImage.PixelHeight; y++)
+            {
+                for (var x = 0; x < bitmapImage.PixelWidth; x++)
+                {
+                    var pixelLocation = bitmapImage.PixelWidth * y + x;
+                    var pixel = bitmapImage.Pixels[pixelLocation];
+                    var pixelbytes = BitConverter.GetBytes(pixel);
+                    var bwPixel = (byte)(.299 * pixelbytes[2] + .587 * pixelbytes[1] + .114 * pixelbytes[0]);
+                    pixelbytes[0] = bwPixel;
+                    pixelbytes[1] = bwPixel;
+                    pixelbytes[2] = bwPixel;
+                    bitmapImage.Pixels[pixelLocation] = BitConverter.ToInt32(pixelbytes, 0);
+                }
+            }
+
+            return bitmapImage;
         }
 
     }
