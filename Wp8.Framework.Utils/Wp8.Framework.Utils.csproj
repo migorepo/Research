@@ -87,6 +87,7 @@
     <Compile Include="Animation\Flipping.cs" />
     <Compile Include="Behaviors\EventToCommand.cs" />
     <Compile Include="Behaviors\PinchZomBehavior.cs" />
+    <Compile Include="Collections\Extensions.cs" />
     <Compile Include="Command\RouteCommand.cs" />
     <Compile Include="Common\BitmapMemoryCleanUpHelper.cs" />
     <Compile Include="Common\DispatcherTimerHelper.cs" />
@@ -100,11 +101,14 @@
     <Compile Include="Common\Utils.cs" />
     <Compile Include="Encryption\EncriptionHelper.cs" />
     <Compile Include="Encryption\SimpleEncryption.cs" />
+    <Compile Include="Extensions\BitmapExtensions.cs" />
+    <Compile Include="Extensions\EventHandlerExtensions.cs" />
     <Compile Include="Interfaces\IRouteCommand.cs" />
     <Compile Include="Internal\PhoneManifest.cs" />
     <Compile Include="Internal\Resources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\ApplicationSettings.cs" />
+    <Compile Include="Utils\ArgumentValidator.cs" />
     <Compile Include="Utils\AsyncHelper.cs" />
     <Compile Include="Utils\ColorUtility.cs" />
     <Compile Include="Utils\DateTimeUtilities.cs" />
@@ -113,8 +117,10 @@
     <Compile Include="Utils\HttpUtilityExtensions.cs" />
     <Compile Include="Utils\IdentityGenerator.cs" />
     <Compile Include="Utils\ReflectionExtensions.cs" />
+    <Compile Include="Utils\ScreenCaptureUtility.cs" />
     <Compile Include="Utils\StreamExtensions.cs" />
     <Compile Include="Utils\StringExtensions.cs" />
+    <Compile Include="Utils\VisualTree.cs" />
     <Compile Include="Utils\Xml.cs" />
   </ItemGroup>
   <ItemGroup>
