@@ -103,6 +103,7 @@
     <Compile Include="Encryption\SimpleEncryption.cs" />
     <Compile Include="Extensions\BitmapExtensions.cs" />
     <Compile Include="Extensions\EventHandlerExtensions.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
     <Compile Include="Interfaces\IRouteCommand.cs" />
     <Compile Include="Internal\PhoneManifest.cs" />
     <Compile Include="Internal\Resources.cs" />
